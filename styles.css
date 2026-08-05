@@ -553,6 +553,147 @@ footer a { color: var(--muted); font-weight: 650; text-underline-offset: 0.2rem;
 .product-copy ul { padding-left: 1.3rem; }
 .product-copy li { margin-bottom: 0.5rem; }
 
+.product-gallery {
+  max-width: 68rem;
+  margin-top: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.screenshot-grid {
+  columns: 15rem 3;
+  column-gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.screenshot-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 clamp(1rem, 2vw, 1.4rem);
+  overflow: hidden;
+  break-inside: avoid;
+  border: 1px solid var(--glass-border);
+  border-radius: 1.35rem;
+  color: var(--ink);
+  background: var(--glass-background);
+  box-shadow: inset 0 1px 0 var(--glass-highlight), 0 1rem 2.5rem var(--glass-shadow);
+  cursor: zoom-in;
+  text-decoration: none;
+  transform: translateZ(0);
+  transition: border-color 220ms ease, box-shadow 280ms var(--ease), transform 280ms var(--ease);
+}
+
+.screenshot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #111821;
+}
+
+.screenshot-card span {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  min-height: 3.4rem;
+  padding: .85rem 1rem;
+  border-top: 1px solid var(--line);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.screenshot-card span::after {
+  color: var(--accent-dark);
+  content: "+";
+  font-size: .95rem;
+  transition: transform 180ms ease;
+}
+
+.screenshot-card:hover {
+  border-color: rgba(88,201,157,.48);
+  box-shadow: inset 0 1px 0 var(--glass-highlight), 0 1.4rem 3rem var(--glass-shadow);
+  transform: translateY(-4px);
+}
+
+.screenshot-card:hover span::after { transform: translate(2px, -2px); }
+.screenshot-card:active { transform: translateY(-1px) scale(.995); }
+
+.product-legal-links { max-width: 68rem; margin-top: clamp(1rem, 3vw, 2rem); }
+
+body.lightbox-open { overflow: hidden; }
+
+.screenshot-lightbox {
+  width: fit-content;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  color: #f4faf7;
+  background: transparent;
+}
+
+.screenshot-lightbox::backdrop {
+  background: rgba(8, 12, 17, .76);
+  backdrop-filter: blur(16px) saturate(85%);
+}
+
+.screenshot-lightbox[open] { animation: lightbox-enter 240ms var(--ease) both; }
+
+.lightbox-frame {
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 1.4rem;
+  background: #111821;
+  box-shadow: 0 2rem 6rem rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+.lightbox-image {
+  display: block;
+  width: auto;
+  max-width: min(88vw, 70rem);
+  height: auto;
+  max-height: calc(88dvh - 3.6rem);
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  min-height: 3.6rem;
+  margin: 0;
+  padding: 1rem 4.3rem 1rem 1.15rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+  color: rgba(244,250,247,.78);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.lightbox-close {
+  position: absolute;
+  right: .7rem;
+  bottom: .55rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: .78rem;
+  color: #f4faf7;
+  background: rgba(255,255,255,.08);
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.lightbox-close:hover { color: #6be6b8; background: rgba(255,255,255,.13); }
+.lightbox-close:active { transform: scale(.96); }
+.lightbox-close svg { width: 1.05rem; height: 1.05rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+
+@keyframes lightbox-enter {
+  from { opacity: 0; transform: translateY(.75rem) scale(.975); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 .legal-links {
   display: flex;
   flex-wrap: wrap;
@@ -606,5 +747,5 @@ footer a { color: var(--muted); font-weight: 650; text-underline-offset: 0.2rem;
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 0.01ms !important; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

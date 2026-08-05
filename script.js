@@ -46,3 +46,44 @@ appCards.forEach((card) => {
     card.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
   });
 });
+
+const screenshotCards = document.querySelectorAll(".screenshot-card");
+const screenshotLightbox = document.querySelector(".screenshot-lightbox");
+const lightboxImage = screenshotLightbox?.querySelector(".lightbox-image");
+const lightboxCaption = screenshotLightbox?.querySelector(".lightbox-caption");
+const lightboxClose = screenshotLightbox?.querySelector(".lightbox-close");
+
+if (screenshotLightbox && lightboxImage && lightboxCaption && lightboxClose) {
+  screenshotCards.forEach((card) => {
+    card.addEventListener("click", (event) => {
+      const image = card.querySelector("img");
+      const caption = card.querySelector("span");
+
+      if (!image || !caption) return;
+
+      event.preventDefault();
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = caption.textContent;
+      document.body.classList.add("lightbox-open");
+      screenshotLightbox.showModal();
+    });
+  });
+
+  lightboxClose.addEventListener("click", () => screenshotLightbox.close());
+
+  screenshotLightbox.addEventListener("click", (event) => {
+    if (event.target === screenshotLightbox) screenshotLightbox.close();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && screenshotLightbox.open) {
+      event.preventDefault();
+      screenshotLightbox.close();
+    }
+  });
+
+  screenshotLightbox.addEventListener("close", () => {
+    document.body.classList.remove("lightbox-open");
+  });
+}

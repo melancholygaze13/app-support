@@ -6,7 +6,7 @@
     <meta name="description" content="ChordGrid is a focused guitar and bass chord diagram and sheet builder for iPhone and iPad." />
     <meta name="theme-color" content="#eef3fb" />
     <title>ChordGrid - App Details</title>
-    <link rel="icon" href="assets/chordgrid-icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/ChordGrid/chordgrid-icon.svg" type="image/svg+xml" />
     <script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#10161f"}}catch(e){}</script>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -24,7 +24,7 @@
     <main id="main" class="subpage-main">
       <a class="back-link" href="index.html">← Back home</a>
       <header class="product-hero">
-        <img class="app-icon" src="assets/chordgrid-icon.svg" alt="ChordGrid app icon" width="128" height="128" />
+        <img class="app-icon" src="assets/ChordGrid/chordgrid-icon.svg" alt="ChordGrid app icon" width="128" height="128" />
         <div>
           <p class="eyebrow">iPhone & iPad</p>
           <h1>ChordGrid</h1>
@@ -54,11 +54,52 @@
         <p>No account is required, and ChordGrid does not use analytics or tracking. Projects and preferences stay on your device unless you choose to export and share them.</p>
         <h2>Available in eight languages</h2>
         <p>Use ChordGrid in English, German, Spanish, French, Italian, Japanese, Russian, or Simplified Chinese.</p>
-        <div class="legal-links">
-          <a href="privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
-          <a href="terms.html">Terms of Use <span aria-hidden="true">→</span></a>
-        </div>
       </article>
+      <section class="product-gallery" aria-label="App screenshots">
+        <div class="screenshot-grid">
+          <a class="screenshot-card" href="assets/ChordGrid/1.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/1.png" alt="Chord editor showing an E guitar chord diagram" loading="lazy" decoding="async" />
+            <span>Chord editor</span>
+          </a>
+          <a class="screenshot-card" href="assets/ChordGrid/3.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/3.png" alt="Diagram settings for instrument, strings, fret, fingering, tuning, capo, and string state" loading="lazy" decoding="async" />
+            <span>Diagram settings</span>
+          </a>
+          <a class="screenshot-card" href="assets/ChordGrid/4.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/4.png" alt="Chord queue with reorder and editing controls" loading="lazy" decoding="async" />
+            <span>Chord queue</span>
+          </a>
+          <a class="screenshot-card" href="assets/ChordGrid/5.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/5.png" alt="Chord sheet preview with layout and export choices" loading="lazy" decoding="async" />
+            <span>Preview and export</span>
+          </a>
+          <a class="screenshot-card" href="assets/ChordGrid/6.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/6.png" alt="ChordGrid project library with saved chord sheets" loading="lazy" decoding="async" />
+            <span>Project library</span>
+          </a>
+          <a class="screenshot-card" href="assets/ChordGrid/7.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/7.png" alt="ChordGrid Pro status and light, dark, and custom sheet appearance options" loading="lazy" decoding="async" />
+            <span>Appearance</span>
+          </a>
+          <a class="screenshot-card" href="assets/ChordGrid/8.png" aria-haspopup="dialog">
+            <img src="assets/ChordGrid/8.png" alt="Custom sheet editor with color, background, ink, accent, and font controls" loading="lazy" decoding="async" />
+            <span>Custom sheets</span>
+          </a>
+        </div>
+      </section>
+      <div class="legal-links product-legal-links">
+        <a href="privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
+        <a href="terms.html">Terms of Use <span aria-hidden="true">→</span></a>
+      </div>
+      <dialog class="screenshot-lightbox" aria-label="Screenshot preview">
+        <div class="lightbox-frame">
+          <button class="lightbox-close" type="button" aria-label="Close preview">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          </button>
+          <img class="lightbox-image" alt="" />
+          <p class="lightbox-caption"></p>
+        </div>
+      </dialog>
     </main>
     <footer><span>© <span id="year"></span> Dzmitry Kurski</span><a href="mailto:dzmitry.kurski.support@gmail.com">Get support</a></footer>
     <script src="script.js"></script>
