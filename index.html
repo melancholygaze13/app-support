@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Apps and support from independent developer Dzmitry Kurski." />
-    <meta name="theme-color" content="#f6f7f9" />
-    <meta property="og:title" content="Dzmitry Kurski - Apps & Support" />
-    <meta property="og:description" content="Independent iOS apps and support." />
+    <meta name="description" content="ChordGrid for iPhone and iPad, by independent developer Dzmitry Kurski." />
+    <meta name="theme-color" content="#f3f5f2" />
+    <meta property="og:title" content="Dzmitry Kurski — Independent app developer" />
+    <meta property="og:description" content="ChordGrid for iPhone and iPad, plus direct support." />
     <meta property="og:type" content="website" />
-    <title>Dzmitry Kurski - Apps & Support</title>
+    <title>Dzmitry Kurski — Independent app developer</title>
     <link rel="icon" href="assets/chordgrid-icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -20,64 +20,66 @@
         <span class="brand-monogram" aria-hidden="true">DK</span>
         <span>Dzmitry Kurski</span>
       </a>
-      <nav aria-label="Primary navigation">
-        <a href="#apps">Apps</a>
-        <a href="#chordgrid-support">Support</a>
-      </nav>
+      <p>Independent app developer</p>
     </header>
 
     <main id="main">
-      <section class="apps-section" id="apps" aria-labelledby="apps-title">
+      <section class="apps-section" aria-labelledby="apps-title">
         <div class="section-intro">
           <h1 id="apps-title">Apps</h1>
-          <p>Small, focused tools for Apple platforms.</p>
+          <p>Small, focused tools made for Apple platforms.</p>
         </div>
 
-        <div class="app-grid">
+        <div class="home-grid">
           <article class="app-card">
-            <a class="app-card-main" href="chordgrid.html" aria-label="View ChordGrid details">
-              <img class="app-icon" src="assets/chordgrid-icon.svg" alt="ChordGrid app icon" width="112" height="112" />
+            <div class="app-card-content">
+              <img class="app-icon" src="assets/chordgrid-icon.svg" alt="ChordGrid app icon" width="96" height="96" />
               <div class="app-copy">
-                <p class="platform">iPhone & iPad</p>
+                <p class="platform">iPhone &amp; iPad</p>
                 <h2>ChordGrid</h2>
                 <p>Create guitar and bass chord diagrams, arrange them into sheets, and export the result.</p>
               </div>
-              <span class="app-arrow" aria-hidden="true">→</span>
-            </a>
-            <div class="app-card-footer" id="chordgrid-support">
-              <span>Version 1.0</span>
-              <a href="chordgrid.html">Product details</a>
             </div>
-            <aside class="app-support" aria-labelledby="support-title">
-              <div class="app-support-heading">
-                <p class="eyebrow">ChordGrid</p>
-                <h2 id="support-title">Support</h2>
-                <p>Need help, found a bug, or have a feature suggestion?</p>
-                <a class="email-link" href="mailto:dzmitry.kurski.support@gmail.com">dzmitry.kurski.support@gmail.com</a>
+            <div class="app-card-bottom">
+              <span class="app-version">Version 1.0</span>
+              <div class="card-legal" aria-label="ChordGrid legal information">
+                <a href="privacy.html">Privacy policy</a>
+                <a href="terms.html">Terms of use</a>
               </div>
-
-              <div class="app-support-details">
-                <h3>When contacting support, please include:</h3>
-                <ul class="support-list">
-                  <li>Your device model</li>
-                  <li>Your iOS or iPadOS version</li>
-                  <li>Your ChordGrid version</li>
-                  <li>A description of the problem</li>
-                </ul>
-                <div class="legal-links" aria-label="Legal information">
-                  <a href="privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
-                  <a href="terms.html">Terms of Use <span aria-hidden="true">→</span></a>
-                </div>
-              </div>
-            </aside>
+              <a class="details-link" href="chordgrid.html">View app <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
+
+          <aside class="support" aria-labelledby="support-title">
+            <div class="support-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <path d="M4 13v-1a8 8 0 0 1 16 0v1M6.5 18H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h.5v6Zm11 0h.5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-.5v6Zm0 0c0 1.5-1.5 2.5-3.5 2.5h-1" />
+              </svg>
+            </div>
+            <p class="eyebrow">Support</p>
+            <h2 id="support-title">Need a hand?</h2>
+            <p class="support-copy">Questions, bug reports, and thoughtful feature ideas for any app are welcome.</p>
+            <a class="email-link" href="mailto:dzmitry.kurski.support@gmail.com">
+              <span>dzmitry.kurski.support@gmail.com</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="support-details">
+              <h3>When contacting support, please include:</h3>
+              <ul class="support-list">
+                <li>Your device model</li>
+                <li>Your iOS or iPadOS version</li>
+                <li>The app name and version</li>
+                <li>What happened</li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
     </main>
 
     <footer>
       <span>© <span id="year"></span> Dzmitry Kurski</span>
-      <a href="mailto:dzmitry.kurski.support@gmail.com">Contact</a>
+      <span>Made independently</span>
     </footer>
 
     <script src="script.js"></script>
