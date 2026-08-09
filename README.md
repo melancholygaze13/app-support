@@ -22,7 +22,7 @@ The site has no build step and can be hosted directly from the repository root.
 
 - `index.html` - app catalog and support
 - `chordgrid.html` - ChordGrid product details
-- `privacy.html` - ChordGrid privacy policy
-- `terms.html` - ChordGrid terms of use
+- `chordgrid/privacy.html` - ChordGrid privacy policy
+- `chordgrid/terms.html` - ChordGrid terms of use
 
 The app catalog uses a responsive `auto-fit` grid, so additional app cards can be added without changing the layout.
