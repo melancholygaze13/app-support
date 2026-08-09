@@ -495,6 +495,50 @@ footer a { color: var(--muted); font-weight: 650; text-underline-offset: 0.2rem;
 
 .back-link:hover { color: var(--ink); transform: translateX(-2px); }
 
+.legal-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  align-items: center;
+  max-width: 47rem;
+  margin-bottom: 2.5rem;
+}
+
+.legal-topline .back-link { margin-bottom: 0; }
+
+.language-switcher {
+  display: flex;
+  gap: .65rem;
+  align-items: center;
+}
+
+.language-switcher label {
+  color: var(--soft);
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.language-switcher select {
+  min-width: 8.5rem;
+  padding: .66rem 2.15rem .66rem .8rem;
+  border: 1px solid var(--line);
+  border-radius: .72rem;
+  appearance: none;
+  color: var(--ink);
+  background-color: var(--control-background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%2369746f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right .75rem center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 1px 0 var(--control-highlight);
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.language-switcher select:hover { border-color: var(--accent-dark); }
+
 .legal-header,
 .legal-content,
 .product-copy { max-width: 47rem; }
@@ -504,7 +548,11 @@ footer a { color: var(--muted); font-weight: 650; text-underline-offset: 0.2rem;
   border-bottom: 1px solid var(--line);
 }
 
-.legal-header h1 { font-size: clamp(3rem, 8vw, 5.5rem); }
+.legal-header h1 {
+  overflow-wrap: anywhere;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  hyphens: auto;
+}
 .legal-header p:last-child { margin-bottom: 0; color: var(--soft); font-size: 0.85rem; }
 
 .legal-content { padding-top: 0.5rem; }
@@ -736,6 +784,7 @@ body.lightbox-open { overflow: hidden; }
   .product-hero .app-icon { width: 5rem; height: 5rem; border-radius: 1.2rem; }
   .product-hero h1 { font-size: clamp(2.5rem, 12vw, 3.6rem); }
   .product-gallery::before { inset: -.35rem; border-radius: .85rem; }
+  .legal-topline { flex-wrap: wrap; }
   footer { align-items: flex-end; }
 }
 
