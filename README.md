@@ -14,9 +14,9 @@ Then visit `http://localhost:8000`.
 
 ## GitHub Pages
 
-In the repository settings, open **Pages**, select **Deploy from a branch**, and publish the root of the `main` branch.
+In the repository settings, open **Pages** and set **Source** to **GitHub Actions**. Every push to `main` runs `.github/workflows/pages.yml`, which copies the site into `_site` and publishes it.
 
-The site has no build step and can be hosted directly from the repository root.
+GitHub Pages caches files for 10 minutes. To keep browsers from pairing a new page with an old stylesheet, link CSS and JS as `file.css?v=dev`; the workflow replaces `dev` with the commit hash on each deploy. New top-level site files must also be added to the `cp` line in the workflow.
 
 ## Pages
 
