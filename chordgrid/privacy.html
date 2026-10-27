@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="ChordGrid Privacy Policy." />
-    <meta name="theme-color" content="#eef3fb" />
+    <meta name="theme-color" content="#f5f2ec" />
     <title>ChordGrid Privacy Policy</title>
-    <script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#10161f"}}catch(e){}</script>
-    <link rel="stylesheet" href="../styles.css?v=20260828-6" />
+    <script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#101314"}})()</script>
+    <link rel="stylesheet" href="../styles.css?v=20261027-10" />
   </head>
-  <body>
+  <body class="page-legal">
     <header class="site-header">
       <a class="brand" href="../index.html"><span class="brand-monogram" aria-hidden="true">DK</span><span>Dzmitry Kurski</span></a>
       <div class="header-actions">
@@ -38,17 +38,20 @@
         </div>
       </div>
       <header class="legal-header">
-        <p class="eyebrow">ChordGrid</p>
         <h1 data-i18n="title">Privacy Policy</h1>
-        <p data-i18n="updated">Last updated: September 14, 2026</p>
+        <p data-i18n="updated">Last updated: October 27, 2026</p>
       </header>
       <article class="legal-content">
         <h2 data-i18n="dataHeading">Your data</h2>
         <p data-i18n="dataBody">ChordGrid does not collect, track, sell, or transmit personal data to the developer.</p>
         <h2 data-i18n="storageHeading">Local storage</h2>
-        <p data-i18n="storageBody">Projects, personal chords, and preferences are stored locally on your device and remain there until you delete them or remove the app.</p>
+        <p data-i18n="storageBody">Projects (including their keys and chord symbols), personal chords, and preferences are stored locally on your device and remain there until you delete them or remove the app.</p>
+        <h2 data-i18n="deletionHeading">Deleting your data</h2>
+        <p data-i18n="deletionBody">You can delete projects and personal chords inside ChordGrid at any time, or delete the app to remove all of its data. Because no data is sent to the developer, there is nothing to request or revoke. If you use iCloud Backup or back up your device to a computer, those backups may include ChordGrid’s data until they are deleted.</p>
         <h2 data-i18n="purchasesHeading">Purchases</h2>
         <p data-i18n="purchasesBody">ChordGrid uses Apple’s StoreKit to process purchases. Apple handles purchase and account information under Apple’s privacy policy.</p>
+        <h2 data-i18n="thirdPartyHeading">Third parties</h2>
+        <p data-i18n="thirdPartyBody">ChordGrid contains no analytics, advertising, or other third-party SDKs, and it does not share data with third parties. The only outside service it uses is Apple’s App Store for purchases.</p>
         <h2 data-i18n="exportsHeading">Exports and sharing</h2>
         <p data-i18n="exportsBody">Exported images, PDF files, and editable .chordgrid project files leave the app only when you choose to export or share them.</p>
         <h2 data-i18n="contactHeading">Contact</h2>
@@ -57,6 +60,6 @@
     </main>
     <footer><span>© <span id="year"></span> Dzmitry Kurski</span><a href="terms.html" data-i18n="terms">Terms of Use</a></footer>
     <script src="../script.js"></script>
-    <script src="privacy.js?v=20260914-1"></script>
+    <script src="privacy.js?v=20261027-3"></script>
   </body>
 </html>

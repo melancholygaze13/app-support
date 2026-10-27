@@ -20,11 +20,26 @@ function setTheme(theme) {
   }
 
   if (themeColor) {
-    themeColor.content = isDark ? "#10161f" : "#eef3fb";
+    themeColor.content = isDark ? "#101314" : "#f5f2ec";
   }
 }
 
 setTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+
+function storedTheme() {
+  try {
+    return localStorage.getItem("theme");
+  } catch (error) {
+    return null;
+  }
+}
+
+// Follow system appearance changes until the visitor picks a theme with the toggle.
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+  if (!storedTheme()) {
+    setTheme(event.matches ? "dark" : "light");
+  }
+});
 
 themeToggle?.addEventListener("click", () => {
   const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
@@ -37,12 +52,10 @@ themeToggle?.addEventListener("click", () => {
   }
 });
 
-const appCards = document.querySelectorAll(".app-card");
+// Keep the product reel still for visitors who prefer reduced motion.
+const reelVideo = document.querySelector(".product-reel-video");
 
-appCards.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const bounds = card.getBoundingClientRect();
-    card.style.setProperty("--spot-x", `${event.clientX - bounds.left}px`);
-    card.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
-  });
-});
+if (reelVideo && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  reelVideo.removeAttribute("autoplay");
+  reelVideo.pause();
+}

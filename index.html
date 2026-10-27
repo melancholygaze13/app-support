@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Create guitar and bass chord sheets, reuse shapes from your Chord Library, and share editable projects with ChordGrid for iPhone and iPad." />
-    <meta name="theme-color" content="#eef3fb" />
+    <meta name="description" content="Create guitar and bass chord sheets, choose chords by symbol, compose in a key, and share editable projects with ChordGrid for iPhone and iPad." />
+    <meta name="theme-color" content="#f5f2ec" />
     <meta property="og:title" content="Dzmitry Kurski — Independent app developer" />
-    <meta property="og:description" content="Create guitar and bass chord sheets, reuse your favorite chords, and share editable projects with ChordGrid." />
+    <meta property="og:description" content="Create guitar and bass chord sheets, choose chords by symbol, and share editable projects with ChordGrid." />
     <meta property="og:type" content="website" />
     <title>Dzmitry Kurski — Independent app developer</title>
-    <script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#10161f"}}catch(e){}</script>
-    <link rel="stylesheet" href="styles.css?v=20260828-6" />
+    <script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#101314"}})()</script>
+    <link rel="stylesheet" href="styles.css?v=20261027-10" />
   </head>
-  <body>
+  <body class="page-home">
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Home">
         <span class="brand-monogram" aria-hidden="true">DK</span>
@@ -28,85 +28,83 @@
     </header>
 
     <main id="main">
-      <section class="apps-section" aria-labelledby="apps-title">
-        <div class="section-intro">
-          <h1 id="apps-title">Apps</h1>
-          <p>Small, focused tools made for Apple platforms.</p>
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="intro-vertical" lang="ja" aria-hidden="true">東京で制作</p>
+        <h1 id="intro-title">Small, focused apps for <em>iPhone</em> and <em>iPad</em>.</h1>
+        <p class="intro-lede">I’m Dzmitry, an independent developer based in Tokyo, making careful, single-purpose tools for Apple platforms.</p>
+      </section>
+
+      <section aria-labelledby="apps-title">
+        <div class="section-head">
+          <h2 id="apps-title">Apps</h2>
+          <span>1 released · 1 in progress</span>
         </div>
 
-        <div class="home-grid">
-          <article class="app-card">
-            <div class="app-card-content">
-              <img class="app-icon" src="assets/ChordGrid/chordgrid-icon.svg" alt="ChordGrid app icon" width="96" height="96" />
-              <div class="app-copy">
-                <p class="platform">iPhone &amp; iPad</p>
-                <h2>ChordGrid</h2>
-                <p>Create guitar and bass chord sheets, reuse your favorite chords, and share editable projects.</p>
-              </div>
-            </div>
-            <div class="app-card-bottom">
-              <span class="app-version">Version 1.1.1</span>
-              <div class="card-legal" aria-label="ChordGrid legal information">
-                <a href="chordgrid/privacy.html">Privacy policy</a>
-                <a href="chordgrid/terms.html">Terms of use</a>
-              </div>
-              <div class="card-actions">
+        <ol class="app-index">
+          <li class="app-row">
+            <span class="app-row-number" aria-hidden="true">01</span>
+            <img class="app-icon" src="assets/ChordGrid/chordgrid-icon.svg" alt="" width="88" height="88" />
+            <div class="app-row-copy">
+              <h3><a href="chordgrid.html">ChordGrid</a></h3>
+              <p class="platform">iPhone &amp; iPad <span>· Version 1.2.0</span></p>
+              <p>Create guitar and bass chord sheets, choose chords by symbol, and share editable projects.</p>
+              <div class="app-row-links">
                 <a class="app-store-badge app-store-badge--compact" href="https://apps.apple.com/us/app/chordgrid/id6796872043?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6796872043">
-                  <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1787184000" alt="Download on the App Store" width="245" height="82" />
+                  <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1787184000" alt="Download ChordGrid on the App Store" width="245" height="82" />
                 </a>
-                <a class="details-link" href="chordgrid.html">View app <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="chordgrid.html">View app <span aria-hidden="true">↗</span></a>
+                <a class="quiet-link" href="chordgrid/privacy.html">Privacy</a>
+                <a class="quiet-link" href="chordgrid/terms.html">Terms</a>
               </div>
             </div>
-          </article>
+            <figure class="app-row-preview">
+              <img src="assets/ChordGrid/chord-library-tiles.jpg" alt="Guitar chord diagrams for G, Em, Dm, and E7 arranged as tiles in ChordGrid" width="900" height="1957" loading="lazy" />
+            </figure>
+          </li>
 
-          <article class="app-card app-card--coming-soon" aria-labelledby="coming-soon-title">
-            <div class="app-card-content">
-              <div class="app-icon app-icon--placeholder" aria-hidden="true">
-                <svg viewBox="0 0 64 64" role="presentation">
-                  <rect x="11" y="11" width="17" height="17" rx="5" />
-                  <rect x="36" y="11" width="17" height="17" rx="5" />
-                  <rect x="11" y="36" width="17" height="17" rx="5" />
-                  <path d="M44.5 37v16M36.5 45h16" />
-                </svg>
-              </div>
-              <div class="app-copy">
-                <p class="platform">Apple platforms</p>
-                <h2 id="coming-soon-title">Coming soon</h2>
-                <p>A new focused app is taking shape. Details will appear here when it’s ready.</p>
-              </div>
-            </div>
-          </article>
-
-          <aside class="support" aria-labelledby="support-title">
-            <div class="support-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation">
-                <path d="M4 13v-1a8 8 0 0 1 16 0v1M6.5 18H6a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h.5v6Zm11 0h.5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-.5v6Zm0 0c0 1.5-1.5 2.5-3.5 2.5h-1" />
+          <li class="app-row app-row--upcoming">
+            <span class="app-row-number" aria-hidden="true">02</span>
+            <div class="app-icon app-icon--placeholder" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="presentation">
+                <rect x="11" y="11" width="17" height="17" rx="5" />
+                <rect x="36" y="11" width="17" height="17" rx="5" />
+                <rect x="11" y="36" width="17" height="17" rx="5" />
+                <path d="M44.5 37v16M36.5 45h16" />
               </svg>
             </div>
-            <p class="eyebrow">Support</p>
-            <h2 id="support-title">Need a hand?</h2>
-            <p class="support-copy">Questions, bug reports, and thoughtful feature ideas for any app are welcome.</p>
-            <a class="email-link" href="mailto:dzmitry.kurski.support@gmail.com">
-              <span>dzmitry.kurski.support@gmail.com</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <div class="support-details">
-              <h3>When contacting support, please include:</h3>
-              <ul class="support-list">
-                <li>Your device model</li>
-                <li>Your iOS or iPadOS version</li>
-                <li>The app name and version</li>
-                <li>What happened</li>
-              </ul>
+            <div class="app-row-copy">
+              <h3>Coming soon</h3>
+              <p class="platform">Apple platforms</p>
+              <p>A new focused app is taking shape. Details will appear here when it’s ready.</p>
             </div>
-          </aside>
-        </div>
+          </li>
+        </ol>
       </section>
+
+      <aside class="support" aria-labelledby="support-title">
+        <div>
+          <h2 id="support-title">Need a hand?</h2>
+          <p class="support-copy">Questions, bug reports, and thoughtful feature ideas for any app are welcome.</p>
+          <a class="email-link" href="mailto:dzmitry.kurski.support@gmail.com">
+            <span>dzmitry.kurski.support<wbr>@gmail.com</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="support-details">
+          <h3>When contacting support, please include:</h3>
+          <ul class="support-list">
+            <li>Your device model</li>
+            <li>Your iOS or iPadOS version</li>
+            <li>The app name and version</li>
+            <li>What happened</li>
+          </ul>
+        </div>
+      </aside>
     </main>
 
     <footer>
       <span>© <span id="year"></span> Dzmitry Kurski</span>
-      <span>Made independently</span>
+      <span>Made independently in Tokyo</span>
     </footer>
 
     <script src="script.js"></script>

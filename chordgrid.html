@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Create guitar and bass chord sheets, reuse shapes from your Chord Library, and share editable projects with ChordGrid for iPhone and iPad." />
-    <meta name="theme-color" content="#eef3fb" />
+    <meta name="description" content="Create guitar and bass chord sheets, choose chords by symbol, compose in a key, and share editable projects with ChordGrid for iPhone and iPad." />
+    <meta name="theme-color" content="#f5f2ec" />
     <title>ChordGrid - App Details</title>
-    <script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#10161f"}}catch(e){}</script>
-    <link rel="stylesheet" href="styles.css?v=20260828-6" />
+    <script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark"){document.documentElement.dataset.theme="dark";document.querySelector('meta[name="theme-color"]').content="#101314"}})()</script>
+    <link rel="stylesheet" href="styles.css?v=20261027-10" />
   </head>
   <body>
     <header class="site-header">
@@ -22,70 +22,112 @@
     </header>
     <main id="main" class="subpage-main">
       <a class="back-link" href="index.html">← Back home</a>
+
       <header class="product-hero">
-        <img class="app-icon" src="assets/ChordGrid/chordgrid-icon.svg" alt="ChordGrid app icon" width="128" height="128" />
-        <div>
-          <p class="eyebrow">iPhone & iPad</p>
+        <img class="app-icon" src="assets/ChordGrid/chordgrid-icon.svg" alt="ChordGrid app icon" width="120" height="120" />
+        <div class="product-hero-copy">
           <h1>ChordGrid</h1>
-          <p>Create precise guitar and bass chords, reuse shapes from your Chord Library, arrange them into clear sheets, and share your work.</p>
-          <div class="product-meta"><span>Version 1.1.1</span><span>iOS & iPadOS 26+</span></div>
-          <a class="app-store-badge app-store-badge--hero" href="https://apps.apple.com/us/app/chordgrid/id6796872043?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6796872043">
+          <p>Create precise guitar and bass chords or choose them by symbol, reuse shapes from your Chord Library, arrange them into clear sheets, and share your work.</p>
+        </div>
+        <div class="product-hero-actions">
+          <a class="app-store-badge" href="https://apps.apple.com/us/app/chordgrid/id6796872043?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6796872043">
             <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1787184000" alt="Download on the App Store" width="245" height="82" />
           </a>
+          <div class="product-meta"><span>Version 1.2.0</span><span>iPhone &amp; iPad</span><span>iOS &amp; iPadOS 26+</span></div>
         </div>
       </header>
-      <article class="product-copy">
-        <section class="product-feature">
-          <h2>What’s new in 1.1.1</h2>
-          <p>Save the chord you’re editing directly to your Chord Library with the new bookmark button beside the chord-name field. Leave the name blank to use an available default name automatically, and preview the exact diagram before saving. This release also improves the personal-chord layout on iPad, save confirmations, and error feedback.</p>
+
+      <figure class="product-reel" style="background-image: url('assets/ChordGrid/header-poster.jpg')">
+        <video class="product-reel-video" autoplay muted loop playsinline preload="metadata" poster="assets/ChordGrid/header-poster.jpg" aria-label="ChordGrid logo surrounded by guitar chord diagrams">
+          <source src="assets/ChordGrid/header-loop.mp4" type="video/mp4" />
+        </video>
+      </figure>
+
+      <section class="whats-new" aria-labelledby="whats-new-title">
+        <h2 id="whats-new-title">What’s new in 1.2.0</h2>
+        <p>Choose chords by symbol: pick a root, chord type, and optional bass note or inversion, then swipe through compatible voicings to load one or add it straight to your sheet. ChordGrid Pro adds Key Palettes, which show the seven chords of any major or natural-minor key as pads with Roman-numeral roles. This release also adds built-in six-string guitar voicings for all twelve roots and layouts that adapt better to larger text sizes.</p>
+      </section>
+
+      <div class="showcase">
+        <section class="showcase-row showcase-row--text" aria-labelledby="by-symbol-title">
+          <div class="showcase-copy">
+            <h2 id="by-symbol-title">Choose chords by symbol</h2>
+            <p>Pick a root, chord type, and optional bass note or inversion from major, minor, diminished, augmented, suspended, sixth, and seventh chords, with sharp or flat spelling. Swipe through compatible voicings, including your matching personal chords, then load one for editing or add it to your sheet. Selections can be undone, and a warning appears if an edited diagram no longer matches its symbol.</p>
+          </div>
         </section>
-        <section class="product-feature">
-          <h2>Create precise chord diagrams</h2>
-          <p>Choose guitar or bass, place fretted notes, and mark open or muted strings. Set the starting fret and capo position, customize the tuning across your sheet, name chords, and use undo and redo as you work.</p>
+
+        <section class="showcase-row showcase-row--text" aria-labelledby="key-title">
+          <div class="showcase-copy">
+            <h2 id="key-title">Compose in a key with Pro</h2>
+            <p>Choose any major or natural-minor key to see its seven chords as pads with Roman-numeral roles and diagrams. Tap a pad to add its best voicing without changing your draft, or touch and hold it to choose another. Chord names follow the key signature, and your key is saved with the project without ever transposing existing chords.</p>
+          </div>
         </section>
-        <section class="product-feature">
-          <h2>Keep your chords close</h2>
-          <p>Start with built-in presets for common six-string guitar chords, or save the chord you’re editing directly to your personal library for reuse across projects. Preview its exact diagram before saving, search by name, browse favorites and recently used chords, and filter by instrument, string count, tuning, and capo. Load a chord for editing or quickly add it to your sheet.</p>
+
+        <section class="showcase-row showcase-row--text" aria-labelledby="diagrams-title">
+          <div class="showcase-copy">
+            <h2 id="diagrams-title">Create precise chord diagrams</h2>
+            <p>Choose guitar or bass, place fretted notes, and mark open or muted strings. Set the starting fret and capo position, customize the tuning across your sheet, name chords, and use undo and redo as you work.</p>
+          </div>
         </section>
-        <section class="product-feature">
+
+        <section class="showcase-row showcase-row--text" aria-labelledby="library-title">
+          <div class="showcase-copy">
+            <h2 id="library-title">Keep your chords close</h2>
+            <p>Start with built-in six-string guitar voicings for all twelve roots, or save the chord you’re editing directly to your personal library for reuse across projects. Search by name, browse favorites and recently used chords, and filter by instrument, string count, tuning, and capo.</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="feature-grid">
+        <section>
           <h2>Build organized chord sheets</h2>
           <p>Add multiple diagrams, reorder them with drag and drop or menu actions, and reopen any chord for editing. Preview the completed sheet before exporting, choose a light or dark appearance, and rely on automatic project saving.</p>
         </section>
-        <section class="product-feature">
+        <section>
           <h2>Share editable projects</h2>
-          <p>Export complete projects as .chordgrid files and share them with other ChordGrid users to continue editing. Import through Files or open projects from other apps. Keep both copies, or replace an existing project while retaining a recovery copy. For finished sheets, export PNG images or PDF files with Pro.</p>
+          <p>Export complete projects as .chordgrid files and share them with other ChordGrid users to continue editing. Import through Files or open projects from other apps. Keep both copies, or replace an existing project while retaining a recovery copy.</p>
         </section>
-        <section class="product-feature">
-          <h2>Free features</h2>
-          <p>The free version includes six-string guitar and four-string bass diagrams, the Chord Library, editable project import and export, Grid sheet layouts, and PNG export with a “Made with ChordGrid” watermark.</p>
-        </section>
-        <section class="product-feature">
-          <h2>ChordGrid Pro</h2>
-          <div>
-            <p>One optional, permanent purchase unlocks:</p>
-            <ul>
-              <li>7- and 8-string guitar diagrams</li>
-              <li>5- and 6-string bass diagrams</li>
-              <li>Row and Column sheet layouts in addition to Grid</li>
-              <li>Custom sheet colors, typography, and transparency</li>
-              <li>Custom watermark text or watermark removal</li>
-              <li>Numbered fingering on chord diagrams</li>
-              <li>PDF export</li>
-            </ul>
-          </div>
-        </section>
-        <section class="product-feature">
+        <section>
           <h2>Privacy by default</h2>
           <p>No account is required, and ChordGrid does not use analytics or tracking. Your projects, personal chords, and preferences are stored on your device. You choose what to export and share.</p>
         </section>
-        <section class="product-feature">
+        <section>
           <h2>Available in eight languages</h2>
           <p>Use ChordGrid in English, German, Spanish, French, Italian, Japanese, Russian, or Simplified Chinese.</p>
         </section>
-      </article>
-      <div class="legal-links product-legal-links">
-        <a href="chordgrid/privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
-        <a href="chordgrid/terms.html">Terms of Use <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="plans">
+        <section class="plan" aria-labelledby="free-title">
+          <h2 id="free-title">Free</h2>
+          <p>Everything you need to build and share chord sheets.</p>
+          <ul>
+            <li>Six-string guitar and four-string bass diagrams</li>
+            <li>The Chord Library and chord selection by symbol</li>
+            <li>Editable project import and export</li>
+            <li>Grid sheet layouts</li>
+            <li>PNG export with a “Made with ChordGrid” watermark</li>
+          </ul>
+        </section>
+        <section class="plan plan--pro" aria-labelledby="pro-title">
+          <h2 id="pro-title">ChordGrid Pro</h2>
+          <p>One optional, permanent purchase unlocks:</p>
+          <ul>
+            <li>Key Palettes for major and natural-minor keys</li>
+            <li>7- and 8-string guitar diagrams</li>
+            <li>5- and 6-string bass diagrams</li>
+            <li>Row and Column sheet layouts in addition to Grid</li>
+            <li>Custom sheet colors, typography, and transparency</li>
+            <li>Custom watermark text or watermark removal</li>
+            <li>Numbered fingering on chord diagrams</li>
+            <li>PDF export</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="legal-links">
+        <a class="text-link" href="chordgrid/privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="chordgrid/terms.html">Terms of Use <span aria-hidden="true">→</span></a>
       </div>
     </main>
     <footer><span>© <span id="year"></span> Dzmitry Kurski</span><a href="mailto:dzmitry.kurski.support@gmail.com">Get support</a></footer>
