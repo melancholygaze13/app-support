@@ -288,8 +288,8 @@ footer {
 
 .app-row {
   display: grid;
-  grid-template-columns: 3rem 5.5rem minmax(0, 1fr) minmax(12rem, 20rem);
-  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: 3rem 5.5rem minmax(0, 1fr);
+  gap: 1.75rem clamp(1.25rem, 3vw, 2.5rem);
   align-items: center;
   padding-block: clamp(2.5rem, 5vw, 3.75rem);
 }
@@ -307,7 +307,8 @@ footer {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 1.25rem;
-  box-shadow: 0 .75rem 1.75rem -.75rem rgba(18, 22, 24, .45);
+  /* Follows the icon's own alpha mask instead of the box corners. */
+  filter: drop-shadow(0 .6rem .7rem rgba(18, 22, 24, .3));
 }
 
 .app-icon--placeholder {
@@ -316,7 +317,7 @@ footer {
   border: 1px dashed var(--line-strong);
   color: var(--soft);
   background: transparent;
-  box-shadow: none;
+  filter: none;
 }
 
 .app-icon--placeholder svg {
@@ -376,24 +377,26 @@ footer {
 
 .app-row-links .quiet-link:hover { color: var(--ink); }
 
+/* Sits under the app copy at the loop's native 1600 × 686 frame. */
 .app-row-preview {
+  grid-column: 3;
+  max-width: 36rem;
   margin: 0;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1600 / 686;
   border-radius: 1rem;
-  background: var(--night);
+  background: var(--night) center / cover no-repeat;
   box-shadow: var(--shadow);
 }
 
-.app-row-preview img {
+.app-row-preview video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 42%;
   transition: transform 600ms var(--ease);
 }
 
-.app-row:hover .app-row-preview img { transform: scale(1.04); }
+.app-row:hover .app-row-preview video { transform: scale(1.04); }
 
 .app-row--upcoming .app-row-copy h3 { color: var(--soft); }
 .app-row--upcoming .platform { color: var(--soft); }
@@ -752,7 +755,6 @@ footer a { color: var(--muted); font-weight: 650; }
   .intro-vertical { display: none; }
   .app-row { grid-template-columns: 2.25rem 4.5rem minmax(0, 1fr); }
   .app-row .app-icon { width: 4.5rem; height: 4.5rem; border-radius: 1rem; }
-  .app-row-preview { grid-column: 3; max-width: 26rem; }
   .support { grid-template-columns: 1fr; }
   .product-hero { grid-template-columns: auto minmax(0, 1fr); align-items: center; }
   .product-hero-actions { grid-column: 1 / -1; }
@@ -772,7 +774,7 @@ footer a { color: var(--muted); font-weight: 650; }
   .app-row-number { display: none; }
   .app-row .app-icon { width: 4rem; height: 4rem; border-radius: .9rem; }
   .app-row-copy { grid-column: 1 / -1; }
-  .app-row-preview { grid-column: 1 / -1; max-width: none; aspect-ratio: 16 / 10; }
+  .app-row-preview { grid-column: 1 / -1; max-width: none; }
   .app-row { align-items: start; }
   .app-row .app-icon { grid-row: 1; }
   .app-row-copy { grid-row: 2; }
